@@ -17,6 +17,9 @@ type Market struct {
 	MarketName         string  `json:"MarketName"`
 	IsActive           bool    `json:"IsActive"`
 	Created            int64   // Unix timestamp
+	Notice             string  `json:"Notice"`
+	IsSponsored        bool    `json:"IsSponsored"`
+	LogoUrl            string  `json:"LogoUrl"`
 }
 
 // Bittrex API implementation of getmarkets endpoint
@@ -37,23 +40,29 @@ type Market struct {
 //    "message" : "",
 //    "result" : [
 //      {
-//        "MarketCurrency" : "LTC",
-//        "BaseCurrency" : "BTC",
-//        "MarketCurrencyLong" : "Litecoin",
-//        "BaseCurrencyLong" : "Bitcoin",
-//        "MinTradeSize" : 0.01000000,
-//        "MarketName" : "BTC-LTC",
-//        "IsActive" : true,
-//        "Created" : "2014-02-13T00:00:00"
+//        "MarketCurrency": "LTC",
+//        "BaseCurrency": "BTC",
+//        "MarketCurrencyLong": "Litecoin",
+//        "BaseCurrencyLong": "Bitcoin",
+//        "MinTradeSize": 0.01000000,
+//        "MarketName": "BTC-LTC",
+//        "IsActive": true,
+//        "Created": "2014-02-13T00:00:00"
+//        "Notice": "This is a crowdfund hosted by Bittrex.  See https://bittrex.com/crowdfund/lgd for more information.",
+//        "IsSponsored": false,
+//        "LogoUrl": "https://i.imgur.com/R29q3dD.png"
 //      }, {
-//        "MarketCurrency" : "DOGE",
-//        "BaseCurrency" : "BTC",
-//        "MarketCurrencyLong" : "Dogecoin",
-//        "BaseCurrencyLong" : "Bitcoin",
-//        "MinTradeSize" : 100.00000000,
-//        "MarketName" : "BTC-DOGE",
-//        "IsActive" : true,
-//        "Created" : "2014-02-13T00:00:00"
+//        "MarketCurrency": "LGD",
+//        "BaseCurrency": "BTC",
+//        "MarketCurrencyLong": "Legends",
+//        "BaseCurrencyLong": "Bitcoin",
+//        "MinTradeSize": 1e-8,
+//        "MarketName": "BTC-LGD",
+//        "IsActive": true,
+//        "Created": "2017-04-18T07:37:41.3",
+//        "Notice": "This is a crowdfund hosted by Bittrex.  See https://bittrex.com/crowdfund/lgd for more information.",
+//        "IsSponsored": null,
+//        "LogoUrl": null
 //      }, ...
 //    ]
 //  }

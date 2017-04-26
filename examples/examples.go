@@ -14,7 +14,9 @@ func main() {
 
 	client = bittrex.NewPublicClient()
 
-	printMarkets()
+	// printMarkets()
+	// printCurrencies()
+	printTicker()
 }
 
 func prettyPrintJson(msg interface{}) {
@@ -31,6 +33,28 @@ func prettyPrintJson(msg interface{}) {
 func printMarkets() {
 
 	res, err := client.GetMarkets()
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	prettyPrintJson(res)
+}
+
+func printCurrencies() {
+
+	res, err := client.GetCurrencies()
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	prettyPrintJson(res)
+}
+
+func printTicker() {
+
+	res, err := client.GetTicker("BTC-LTC")
 
 	if err != nil {
 		log.Fatal(err)

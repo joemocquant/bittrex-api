@@ -5,6 +5,7 @@ package bittrex
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io/ioutil"
 	"net/http"
@@ -135,6 +136,10 @@ func (c *PublicClient) do(endpoint string, params map[string]string) ([]byte, er
 	ae := APIResult{}
 	if err := json.Unmarshal(body, &ae); err != nil {
 		return nil, fmt.Errorf("API error: %s", ae.Message)
+	}
+
+	if !ae.Success {
+		return nil, errors.New(ae.Message)
 	}
 
 	return ae.Result, nil
