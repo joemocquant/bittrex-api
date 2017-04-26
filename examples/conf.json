@@ -1,0 +1,8 @@
+{
+    "bittrex_public_api": {
+        "api_url": "https://bittrex.com/api/v1.1/public",
+        "httpclient_timeout_sec": 10,
+        "max_requests_sec": 10,
+        "log_level": "debug"
+    }
+}
