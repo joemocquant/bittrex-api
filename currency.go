@@ -32,9 +32,9 @@ type Currency struct {
 // Response
 //
 //  {
-//    "success" : true,
-//    "message" : "",
-//    "result" : [
+//    "success": true,
+//    "message": "",
+//    "result": [
 //      {
 //        "Currency": "BTC",
 //        "CurrencyLong": "Bitcoin",

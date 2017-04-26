@@ -36,9 +36,9 @@ type Market struct {
 // Response
 //
 //  {
-//    "success" : true,
-//    "message" : "",
-//    "result" : [
+//    "success": true,
+//    "message": "",
+//    "result": [
 //      {
 //        "MarketCurrency": "LTC",
 //        "BaseCurrency": "BTC",

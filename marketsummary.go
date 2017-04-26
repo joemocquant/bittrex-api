@@ -89,9 +89,9 @@ func (client *PublicClient) GetMarketSummaries() (MarketSummaries, error) {
 // Response
 //
 //  {
-//    "success" : true,
-//    "message" : "",
-//    "result" : [
+//    "success": true,
+//    "message": "",
+//    "result": [
 //      {
 //        "MarketName": "BTC-LTC",
 //        "High": 0.01350000,
