@@ -16,7 +16,9 @@ func main() {
 
 	// printMarkets()
 	// printCurrencies()
-	printTicker()
+	// printTicker()
+	// printMarketSummaries()
+	printMarketSummary()
 }
 
 func prettyPrintJson(msg interface{}) {
@@ -55,6 +57,28 @@ func printCurrencies() {
 func printTicker() {
 
 	res, err := client.GetTicker("BTC-LTC")
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	prettyPrintJson(res)
+}
+
+func printMarketSummaries() {
+
+	res, err := client.GetMarketSummaries()
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	prettyPrintJson(res)
+}
+
+func printMarketSummary() {
+
+	res, err := client.GetMarketSummary("BTC-LTC")
 
 	if err != nil {
 		log.Fatal(err)

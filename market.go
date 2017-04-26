@@ -47,7 +47,7 @@ type Market struct {
 //        "MinTradeSize": 0.01000000,
 //        "MarketName": "BTC-LTC",
 //        "IsActive": true,
-//        "Created": "2014-02-13T00:00:00"
+//        "Created": "2014-02-13T00:00:00",
 //        "Notice": "This is a crowdfund hosted by Bittrex.  See https://bittrex.com/crowdfund/lgd for more information.",
 //        "IsSponsored": false,
 //        "LogoUrl": "https://i.imgur.com/R29q3dD.png"
