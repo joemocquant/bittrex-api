@@ -1,4 +1,4 @@
-package bittrex
+package publicapi
 
 import (
 	"encoding/json"

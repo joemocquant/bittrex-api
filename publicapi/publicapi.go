@@ -1,7 +1,7 @@
 // Bittrex public API implementation.
 //
 // API Doc: https://bittrex.com/Home/Api
-package bittrex
+package publicapi
 
 import (
 	"encoding/json"
@@ -49,7 +49,7 @@ func init() {
 	customFormatter.FullTimestamp = true
 	logrus.SetFormatter(customFormatter)
 
-	logger = logrus.WithField("context", "[bittrex:publicapi]")
+	logger = logrus.WithField("context", "[api:bittrex:publicapi]")
 
 	content, err := ioutil.ReadFile("conf.json")
 

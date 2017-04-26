@@ -4,15 +4,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
-	"trading/bittrex"
+	"trading/api/bittrex/publicapi"
 )
 
-var client *bittrex.PublicClient
+var client *publicapi.PublicClient
 
 // go run example.go
 func main() {
 
-	client = bittrex.NewPublicClient()
+	client = publicapi.NewPublicClient()
 
 	// printMarkets()
 	// printCurrencies()
