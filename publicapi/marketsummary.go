@@ -22,7 +22,6 @@ type MarketSummary struct {
 	OpenSellOrders int     `json:"OpenSellOrders"`
 	PrevDay        float64 `json:"PrevDay"`
 	Created        int64   // Unix timestamp
-
 }
 
 // Bittrex API implementation of getmarketsummaries endpoint
