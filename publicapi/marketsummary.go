@@ -58,7 +58,7 @@ type MarketSummary struct {
 //      }, ...
 //    ]
 //  }
-func (client *PublicClient) GetMarketSummaries() (MarketSummaries, error) {
+func (client *Client) GetMarketSummaries() (MarketSummaries, error) {
 
 	resp, err := client.do("getmarketsummaries", nil)
 	if err != nil {
@@ -108,7 +108,7 @@ func (client *PublicClient) GetMarketSummaries() (MarketSummaries, error) {
 //      }
 //    ]
 //  }
-func (client *PublicClient) GetMarketSummary(market string) (*MarketSummary, error) {
+func (client *Client) GetMarketSummary(market string) (*MarketSummary, error) {
 
 	params := map[string]string{
 		"market": market,

@@ -66,7 +66,7 @@ type Market struct {
 //      }, ...
 //    ]
 //  }
-func (client *PublicClient) GetMarkets() (Markets, error) {
+func (client *Client) GetMarkets() (Markets, error) {
 
 	resp, err := client.do("getmarkets", nil)
 	if err != nil {

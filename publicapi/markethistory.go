@@ -47,7 +47,7 @@ type Trade struct {
 //      }, ...
 //    ]
 //  }
-func (client *PublicClient) GetMarketHistory(market string) (MarketHistory, error) {
+func (client *Client) GetMarketHistory(market string) (MarketHistory, error) {
 
 	params := map[string]string{
 		"market": market,

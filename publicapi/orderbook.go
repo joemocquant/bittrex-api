@@ -48,7 +48,7 @@ type Order struct {
 //      ]
 //    }
 //  }
-func (client *PublicClient) GetOrderBook(market, typeOrder string) (*OrderBook, error) {
+func (client *Client) GetOrderBook(market, typeOrder string) (*OrderBook, error) {
 
 	params := map[string]string{
 		"market": market,

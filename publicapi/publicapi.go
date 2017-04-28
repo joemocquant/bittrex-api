@@ -21,7 +21,7 @@ var (
 	logger *logrus.Entry
 )
 
-type PublicClient struct {
+type Client struct {
 	httpClient *http.Client
 	throttle   <-chan time.Time
 }
@@ -79,8 +79,8 @@ func init() {
 	}
 }
 
-// NewPublicClient returns a newly configured client
-func NewPublicClient() *PublicClient {
+// NewClient returns a newly configured client
+func NewClient() *Client {
 
 	reqInterval := 1000 * time.Millisecond / time.Duration(conf.MaxRequestsSec)
 
@@ -88,11 +88,11 @@ func NewPublicClient() *PublicClient {
 		Timeout: time.Duration(conf.HTTPClientTimeoutSec) * time.Second,
 	}
 
-	return &PublicClient{&client, time.Tick(reqInterval)}
+	return &Client{&client, time.Tick(reqInterval)}
 }
 
 // Do prepares and executes api call requests.
-func (c *PublicClient) do(endpoint string, params map[string]string) ([]byte, error) {
+func (c *Client) do(endpoint string, params map[string]string) ([]byte, error) {
 
 	url := buildUrl(endpoint, params)
 

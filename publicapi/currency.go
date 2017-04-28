@@ -57,7 +57,7 @@ type Currency struct {
 //    ]
 //  }
 
-func (client *PublicClient) GetCurrencies() (Currencies, error) {
+func (client *Client) GetCurrencies() (Currencies, error) {
 
 	resp, err := client.do("getcurrencies", nil)
 	if err != nil {

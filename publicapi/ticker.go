@@ -34,7 +34,7 @@ type Tick struct {
 //    }
 //  }
 
-func (client *PublicClient) GetTicker(market string) (*Tick, error) {
+func (client *Client) GetTicker(market string) (*Tick, error) {
 
 	params := map[string]string{
 		"market": market,
