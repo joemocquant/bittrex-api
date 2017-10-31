@@ -4,7 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
-	"trading/api/bittrex/publicapi"
+
+	publicapi "github.com/joemocquant/bittrex-api/publicapi"
 )
 
 var client *publicapi.Client
